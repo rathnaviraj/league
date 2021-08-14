@@ -14,9 +14,23 @@ class Team(models.Model):
         verbose_name = _('team')
         verbose_name_plural = _('teams')
 
+    def belongs_to(self, coach):
+        return self.coach.email == coach.email
+
 
 class User(AbstractUser):
-    pass
+
+    ADMIN = 1
+    COACH = 2
+    PLAYER = 3
+
+    ROLE_CHOICES = (
+        (ADMIN, 'Admin'),
+        (COACH, 'Coach'),
+        (PLAYER, 'Player')
+    )
+
+    role = models.PositiveSmallIntegerField(choices=ROLE_CHOICES, blank=True, null=True, default=3)
 
 
 class Admin(User):
@@ -52,6 +66,9 @@ class Player(User):
     class Meta:
         verbose_name = _('player')
         verbose_name_plural = _('players')
+
+    def belongs_to(self, coach):
+        return self.team.coach.email == coach.email
 
 
 class Match(models.Model):
