@@ -56,7 +56,7 @@ class Coach(User):
 
 class Player(User):
     height = models.DecimalField(default=0, decimal_places=2, max_digits=5)
-    average_score = models.DecimalField(default=0, decimal_places=2, max_digits=5)
+    average_score = models.FloatField(default=0)
     number_of_games = models.IntegerField(default=0)
     team = models.ForeignKey(Team, on_delete=models.CASCADE)
 
