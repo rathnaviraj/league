@@ -1,0 +1,16 @@
+- model: main.user
+  pk: 1
+  fields:
+    password: pbkdf2_sha256$260000$9ZykWeyHsv7b960jn7wTdY$4vJjTXeDkNzxm+3UhLctgwK3tbM6fIZFFVuCAVANzoA=
+    last_login: 2021-08-15 06:05:25.585259+00:00
+    is_superuser: true
+    username: admin
+    first_name: 'Admin'
+    last_name: 'User'
+    email: admin@example.com
+    is_staff: true
+    is_active: true
+    date_joined: 2021-08-15 06:01:58.883398+00:00
+    role: 1
+    groups: []
+    user_permissions: []
