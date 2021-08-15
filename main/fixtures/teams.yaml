@@ -1,0 +1,80 @@
+- model: main.team
+  pk: 1
+  fields:
+    name: Los Angeles Lakers
+    average_score: '86.00'
+- model: main.team
+  pk: 2
+  fields:
+    name: New York Knicks
+    average_score: '93.00'
+- model: main.team
+  pk: 3
+  fields:
+    name: Toronto Raptors
+    average_score: '82.2'
+- model: main.team
+  pk: 4
+  fields:
+    name: Phoenix Suns
+    average_score: '84.9'
+- model: main.team
+  pk: 5
+  fields:
+    name: Chicago Bulls
+    average_score: '83.8'
+- model: main.team
+  pk: 6
+  fields:
+    name: Dallas Mavericks
+    average_score: '77.8'
+- model: main.team
+  pk: 7
+  fields:
+    name: Boston Celtics
+    average_score: '74.6'
+- model: main.team
+  pk: 8
+  fields:
+    name: Miami Heat
+    average_score: '89.3'
+- model: main.team
+  pk: 9
+  fields:
+    name: Indiana Pacers
+    average_score: '88.0'
+- model: main.team
+  pk: 10
+  fields:
+    name: Denver Nuggets
+    average_score: '85.1'
+- model: main.team
+  pk: 11
+  fields:
+    name: Utah Jazz
+    average_score: '76.3'
+- model: main.team
+  pk: 12
+  fields:
+    name: Houston Rockets
+    average_score: '81.4'
+- model: main.team
+  pk: 13
+  fields:
+    name: Charlotte Hornets
+    average_score: '83.1'
+- model: main.team
+  pk: 14
+  fields:
+    name: Washington Wizards
+    average_score: '88.0'
+- model: main.team
+  pk: 15
+  fields:
+    name: Cleveland Cavaliers
+    average_score: '84.0'
+- model: main.team
+  pk: 16
+  fields:
+    name: Detroit Pistons
+    average_score: '90.1'
