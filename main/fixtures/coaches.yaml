@@ -1,0 +1,321 @@
+- model: main.user
+  pk: 2
+  fields:
+    password: pbkdf2_sha256$260000$GObEBOoj8PU9m06PZz0tPH$dDvDSoQd4GJyY25EzU1Du0bqwZfK7TfHXpJTCqQlivQ=
+    last_login: null
+    is_superuser: false
+    username: frank
+    first_name: Frank
+    last_name: Vogel
+    email: frank@example.com
+    is_staff: false
+    is_active: true
+    date_joined: 2021-08-15 06:08:04+00:00
+    role: 2
+    groups: []
+    user_permissions: []
+- model: main.user
+  pk: 3
+  fields:
+    password: pbkdf2_sha256$260000$7ma5g2bTfAuycz42vN0iDc$61q/7vEWjNGirc8BSnSouxeS4V/rxhfMP4UFAvLdxxE=
+    last_login: null
+    is_superuser: false
+    username: tom
+    first_name: Tom
+    last_name: Thibodeau
+    email: tom@example.com
+    is_staff: false
+    is_active: true
+    date_joined: 2021-08-15 06:08:56+00:00
+    role: 2
+    groups: []
+    user_permissions: []
+- model: main.user
+  pk: 4
+  fields:
+    password: pbkdf2_sha256$260000$7ma5g2bTfAuycz42vN0iDc$61q/7vEWjNGirc8BSnSouxeS4V/rxhfMP4UFAvLdxxE=
+    last_login: null
+    is_superuser: false
+    username: nick
+    first_name: Nick
+    last_name: Nurse
+    email: nick@example.com
+    is_staff: false
+    is_active: true
+    date_joined: 2021-08-15 06:08:56+00:00
+    role: 2
+    groups: []
+    user_permissions: []
+- model: main.user
+  pk: 5
+  fields:
+    password: pbkdf2_sha256$260000$7ma5g2bTfAuycz42vN0iDc$61q/7vEWjNGirc8BSnSouxeS4V/rxhfMP4UFAvLdxxE=
+    last_login: null
+    is_superuser: false
+    username: monty
+    first_name: Monty
+    last_name: Williams
+    email: monty@example.com
+    is_staff: false
+    is_active: true
+    date_joined: 2021-08-15 06:08:56+00:00
+    role: 2
+    groups: []
+    user_permissions: []
+- model: main.user
+  pk: 6
+  fields:
+    password: pbkdf2_sha256$260000$7ma5g2bTfAuycz42vN0iDc$61q/7vEWjNGirc8BSnSouxeS4V/rxhfMP4UFAvLdxxE=
+    last_login: null
+    is_superuser: false
+    username: billy
+    first_name: Billy
+    last_name: Donovan
+    email: billy@example.com
+    is_staff: false
+    is_active: true
+    date_joined: 2021-08-15 06:08:56+00:00
+    role: 2
+    groups: []
+    user_permissions: []
+- model: main.user
+  pk: 7
+  fields:
+    password: pbkdf2_sha256$260000$7ma5g2bTfAuycz42vN0iDc$61q/7vEWjNGirc8BSnSouxeS4V/rxhfMP4UFAvLdxxE=
+    last_login: null
+    is_superuser: false
+    username: jason
+    first_name: Jason
+    last_name: Kidd
+    email: jason@example.com
+    is_staff: false
+    is_active: true
+    date_joined: 2021-08-15 06:08:56+00:00
+    role: 2
+    groups: []
+    user_permissions: []
+- model: main.user
+  pk: 8
+  fields:
+    password: pbkdf2_sha256$260000$7ma5g2bTfAuycz42vN0iDc$61q/7vEWjNGirc8BSnSouxeS4V/rxhfMP4UFAvLdxxE=
+    last_login: null
+    is_superuser: false
+    username: ime
+    first_name: Ime
+    last_name: Udoka
+    email: ime@example.com
+    is_staff: false
+    is_active: true
+    date_joined: 2021-08-15 06:08:56+00:00
+    role: 2
+    groups: []
+    user_permissions: []
+- model: main.user
+  pk: 9
+  fields:
+    password: pbkdf2_sha256$260000$7ma5g2bTfAuycz42vN0iDc$61q/7vEWjNGirc8BSnSouxeS4V/rxhfMP4UFAvLdxxE=
+    last_login: null
+    is_superuser: false
+    username: erik
+    first_name: Erik
+    last_name: Spoelstra
+    email: erik@example.com
+    is_staff: false
+    is_active: true
+    date_joined: 2021-08-15 06:08:56+00:00
+    role: 2
+    groups: []
+    user_permissions: []
+- model: main.user
+  pk: 10
+  fields:
+    password: pbkdf2_sha256$260000$7ma5g2bTfAuycz42vN0iDc$61q/7vEWjNGirc8BSnSouxeS4V/rxhfMP4UFAvLdxxE=
+    last_login: null
+    is_superuser: false
+    username: rick
+    first_name: Rick
+    last_name: Carlisle
+    email: rick@example.com
+    is_staff: false
+    is_active: true
+    date_joined: 2021-08-15 06:08:56+00:00
+    role: 2
+    groups: []
+    user_permissions: []
+- model: main.user
+  pk: 11
+  fields:
+    password: pbkdf2_sha256$260000$7ma5g2bTfAuycz42vN0iDc$61q/7vEWjNGirc8BSnSouxeS4V/rxhfMP4UFAvLdxxE=
+    last_login: null
+    is_superuser: false
+    username: michael
+    first_name: Michael
+    last_name: Malone
+    email: michael@example.com
+    is_staff: false
+    is_active: true
+    date_joined: 2021-08-15 06:08:56+00:00
+    role: 2
+    groups: []
+    user_permissions: []
+- model: main.user
+  pk: 12
+  fields:
+    password: pbkdf2_sha256$260000$7ma5g2bTfAuycz42vN0iDc$61q/7vEWjNGirc8BSnSouxeS4V/rxhfMP4UFAvLdxxE=
+    last_login: null
+    is_superuser: false
+    username: quin
+    first_name: Quin
+    last_name: Snyder
+    email: quin@example.com
+    is_staff: false
+    is_active: true
+    date_joined: 2021-08-15 06:08:56+00:00
+    role: 2
+    groups: []
+    user_permissions: []
+- model: main.user
+  pk: 13
+  fields:
+    password: pbkdf2_sha256$260000$7ma5g2bTfAuycz42vN0iDc$61q/7vEWjNGirc8BSnSouxeS4V/rxhfMP4UFAvLdxxE=
+    last_login: null
+    is_superuser: false
+    username: stephen
+    first_name: Stephen
+    last_name: Silas
+    email: stephen@example.com
+    is_staff: false
+    is_active: true
+    date_joined: 2021-08-15 06:08:56+00:00
+    role: 2
+    groups: []
+    user_permissions: []
+- model: main.user
+  pk: 14
+  fields:
+    password: pbkdf2_sha256$260000$7ma5g2bTfAuycz42vN0iDc$61q/7vEWjNGirc8BSnSouxeS4V/rxhfMP4UFAvLdxxE=
+    last_login: null
+    is_superuser: false
+    username: james
+    first_name: James
+    last_name: Borrego
+    email: james@example.com
+    is_staff: false
+    is_active: true
+    date_joined: 2021-08-15 06:08:56+00:00
+    role: 2
+    groups: []
+    user_permissions: []
+- model: main.user
+  pk: 15
+  fields:
+    password: pbkdf2_sha256$260000$7ma5g2bTfAuycz42vN0iDc$61q/7vEWjNGirc8BSnSouxeS4V/rxhfMP4UFAvLdxxE=
+    last_login: null
+    is_superuser: false
+    username: wes
+    first_name: Wes
+    last_name: Unseld
+    email: wes@example.com
+    is_staff: false
+    is_active: true
+    date_joined: 2021-08-15 06:08:56+00:00
+    role: 2
+    groups: []
+    user_permissions: []
+- model: main.user
+  pk: 16
+  fields:
+    password: pbkdf2_sha256$260000$7ma5g2bTfAuycz42vN0iDc$61q/7vEWjNGirc8BSnSouxeS4V/rxhfMP4UFAvLdxxE=
+    last_login: null
+    is_superuser: false
+    username: john
+    first_name: John
+    last_name: Bickerstaff
+    email: john@example.com
+    is_staff: false
+    is_active: true
+    date_joined: 2021-08-15 06:08:56+00:00
+    role: 2
+    groups: []
+    user_permissions: []
+- model: main.user
+  pk: 17
+  fields:
+    password: pbkdf2_sha256$260000$7ma5g2bTfAuycz42vN0iDc$61q/7vEWjNGirc8BSnSouxeS4V/rxhfMP4UFAvLdxxE=
+    last_login: null
+    is_superuser: false
+    username: dwane
+    first_name: Dwane
+    last_name: Casey
+    email: dwane@example.com
+    is_staff: false
+    is_active: true
+    date_joined: 2021-08-15 06:08:56+00:00
+    role: 2
+    groups: []
+    user_permissions: []
+
+- model: main.coach
+  pk: 1
+  fields:
+    user_ptr: 2
+- model: main.coach
+  pk: 2
+  fields:
+    user_ptr: 3
+- model: main.coach
+  pk: 3
+  fields:
+    user_ptr: 4
+- model: main.coach
+  pk: 4
+  fields:
+    user_ptr: 5
+- model: main.coach
+  pk: 5
+  fields:
+    user_ptr: 6
+- model: main.coach
+  pk: 6
+  fields:
+    user_ptr: 7
+- model: main.coach
+  pk: 7
+  fields:
+    user_ptr: 8
+- model: main.coach
+  pk: 8
+  fields:
+    user_ptr: 9
+- model: main.coach
+  pk: 9
+  fields:
+    user_ptr: 10
+- model: main.coach
+  pk: 10
+  fields:
+    user_ptr: 11
+- model: main.coach
+  pk: 11
+  fields:
+    user_ptr: 12
+- model: main.coach
+  pk: 12
+  fields:
+    user_ptr: 13
+- model: main.coach
+  pk: 13
+  fields:
+    user_ptr: 14
+- model: main.coach
+  pk: 14
+  fields:
+    user_ptr: 15
+- model: main.coach
+  pk: 15
+  fields:
+    user_ptr: 16
+- model: main.coach
+  pk: 16
+  fields:
+    user_ptr: 17
