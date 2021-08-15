@@ -78,27 +78,37 @@ class Match(models.Model):
     round = models.IntegerField(null=False, blank=False)
     team_a_score = models.IntegerField(null=False, blank=False)
     team_b_score = models.IntegerField(null=False, blank=False)
-    team_a = models.OneToOneField(
+    team_a = models.ForeignKey(
         Team,
         related_name="team_a",
-        on_delete=models.CASCADE
+        on_delete=models.CASCADE,
+
     )
-    team_b = models.OneToOneField(
+    team_b = models.ForeignKey(
         Team,
         related_name="team_b",
         on_delete=models.CASCADE
     )
-    winner = models.OneToOneField(
+    winner = models.ForeignKey(
         Team,
         related_name="winner",
         on_delete=models.CASCADE
     )
-    qualified_match = models.OneToOneField(
+    team_a_qualifying_match = models.OneToOneField(
         'self',
+        related_name="a_qualifying_match",
         on_delete=models.SET_NULL,
         null=True,
         blank=True
     )
+    team_b_qualifying_match = models.OneToOneField(
+        'self',
+        related_name="b_qualifying_match",
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True
+    )
+
 
     @property
     def name(self):

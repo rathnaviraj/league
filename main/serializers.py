@@ -12,7 +12,7 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
 class PlayerSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Player
-        fields = ['url', 'first_name', 'last_name' 'height', 'average_score', 'number_of_games', 'team']
+        fields = ['url', 'first_name', 'last_name', 'height', 'average_score', 'number_of_games', 'team']
 
 
 class TeamSerializer(serializers.HyperlinkedModelSerializer):
@@ -24,4 +24,5 @@ class TeamSerializer(serializers.HyperlinkedModelSerializer):
 class MatchSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Match
-        fields = ['url', 'name', 'round', 'team_a', 'team_b', 'winner', 'qualified_match']
+        fields = ['url', 'name', 'round', 'team_a', 'team_b', 'winner', 'team_a_qualifying_match',
+                  'team_b_qualifying_match']
