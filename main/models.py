@@ -32,6 +32,9 @@ class User(AbstractUser):
 
     role = models.PositiveSmallIntegerField(choices=ROLE_CHOICES, blank=False, null=False, default=3)
 
+    def __str__(self):
+        return "{} {}".format(self.first_name, self.last_name)
+
 
 class Admin(User):
 
@@ -47,7 +50,7 @@ class Coach(User):
     )
 
     def __str__(self):
-        return self.first_name
+        return "{} {} - {}".format(self.first_name, self.last_name, self.team.name)
 
     class Meta:
         verbose_name = _('coach')
@@ -61,7 +64,7 @@ class Player(User):
     team = models.ForeignKey(Team, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.first_name
+        return "{} {}".format(self.first_name, self.last_name)
 
     class Meta:
         verbose_name = _('player')
