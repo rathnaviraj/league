@@ -30,7 +30,7 @@ class User(AbstractUser):
         (PLAYER, 'Player')
     )
 
-    role = models.PositiveSmallIntegerField(choices=ROLE_CHOICES, blank=True, null=True, default=3)
+    role = models.PositiveSmallIntegerField(choices=ROLE_CHOICES, blank=False, null=False, default=3)
 
 
 class Admin(User):
@@ -99,7 +99,7 @@ class Match(models.Model):
 
     @property
     def name(self):
-        return "{}({}) vs {}({})".format(self.team_a.name, self.team_a_score, self.team_b.name, self.team_a_score)
+        return "{}-({}) vs {}-({})".format(self.team_a.name, self.team_a_score, self.team_b.name, self.team_b_score)
 
     @property
     def a_team(self):
