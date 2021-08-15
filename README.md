@@ -6,4 +6,4 @@
 - python3 manage.py loaddata --format=yaml coaches.yaml
 - python3 manage.py loaddata --format=yaml players.yaml 
 - python3 manage.py loaddata --format=yaml matches.yaml
-- python3 manage.py loaddata --format=yaml data.yaml
+- python3 manage.py loaddata --format=yaml master_data.yaml
