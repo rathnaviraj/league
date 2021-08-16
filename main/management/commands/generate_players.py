@@ -1,13 +1,19 @@
-from django.core.management.base import BaseCommand, CommandError
-from faker import Faker
 import random
+
+from django.core.management.base import BaseCommand
+from faker import Faker
 
 from main.management.commands._factories import PlayerFactory
 from main.models import Team
 
 
 class Command(BaseCommand):
-    help = 'Generates players for each team'
+    """
+    Custom management command to generate Players for each team. Not the recommended way of generating player data.
+    Check fixtures instead
+    """
+
+    help = 'Generates players for each team.'
 
     def handle(self, *args, **options):
         fake = Faker('en_US')

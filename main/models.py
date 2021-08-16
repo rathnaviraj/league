@@ -4,6 +4,10 @@ from django.db import models
 
 
 class Team(models.Model):
+    """
+    Model for the data related to each team participated in the league
+    """
+
     name = models.CharField(max_length=40)
     average_score = models.DecimalField(default=0, decimal_places=2, max_digits=5)
 
@@ -15,10 +19,22 @@ class Team(models.Model):
         verbose_name_plural = _('teams')
 
     def belongs_to(self, coach):
+        """
+        Check particular team is coached by given coach user
+
+        Args:
+            coach (User): A lazy user instance of an authenticated coach user
+
+        Returns:
+            boolean: True if team coach is equal to given coach user; else False
+        """
         return self.coach.email == coach.email
 
 
 class User(AbstractUser):
+    """
+    Extended User model from Django Auth module to define a custom User model for the application
+    """
 
     ADMIN = 1
     COACH = 2
@@ -37,12 +53,19 @@ class User(AbstractUser):
 
 
 class Admin(User):
+    """
+    Extended model for Admin user from custom User model
+    """
 
     def __str__(self):
         return self.first_name
 
 
 class Coach(User):
+    """
+    Extended model for Coach user from custom User model
+    """
+
     team = models.OneToOneField(
         Team,
         on_delete=models.CASCADE,
@@ -58,6 +81,10 @@ class Coach(User):
 
 
 class Player(User):
+    """
+    Extended model for Player user from custom User model
+    """
+
     height = models.DecimalField(default=0, decimal_places=2, max_digits=5)
     average_score = models.FloatField(default=0)
     number_of_games = models.IntegerField(default=0)
@@ -71,18 +98,30 @@ class Player(User):
         verbose_name_plural = _('players')
 
     def belongs_to(self, coach):
+        """
+        Check particular player's team coached by given coach user
+
+        Args:
+            coach (User): A lazy user instance of an authenticated coach user
+
+        Returns:
+            boolean: True if player's team coach is equal to given coach user; else False
+        """
         return self.team.coach.email == coach.email
 
 
 class Match(models.Model):
+    """
+    Model for the data related to each match played in the league
+    """
+
     round = models.IntegerField(null=False, blank=False)
     team_a_score = models.IntegerField(null=False, blank=False)
     team_b_score = models.IntegerField(null=False, blank=False)
     team_a = models.ForeignKey(
         Team,
         related_name="team_a",
-        on_delete=models.CASCADE,
-
+        on_delete=models.CASCADE
     )
     team_b = models.ForeignKey(
         Team,
@@ -109,18 +148,15 @@ class Match(models.Model):
         blank=True
     )
 
-
     @property
     def name(self):
+        """
+        Name property derived from other details of the match
+
+        Returns:
+            string: containing both team names and respective scores as a label
+        """
         return "{}-({}) vs {}-({})".format(self.team_a.name, self.team_a_score, self.team_b.name, self.team_b_score)
-
-    @property
-    def a_team(self):
-        return {"name": self.team_a.name, "url": self.team_a}
-
-    @property
-    def b_team(self):
-        return {"name": self.team_b.name, "url": self.team_b}
 
     def __str__(self):
         return self.name

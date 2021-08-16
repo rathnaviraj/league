@@ -4,6 +4,10 @@ from main.models import Player
 
 
 class PlayerFactory(factory.Factory):
+    """
+    Custom factory class for generating Player instances for management commands
+    """
+
     class Meta:
         model = Player
 

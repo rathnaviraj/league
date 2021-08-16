@@ -14,7 +14,7 @@ class PlayerViewSet(viewsets.ReadOnlyModelViewSet):
     """
     API endpoint that allows users to be view or list players.
     """
-    queryset = Player.objects.all().order_by('-date_joined')
+    queryset = Player.objects.all().order_by('average_score')
     serializer_class = PlayerSerializer
     permission_classes = [permissions.IsAuthenticated, custom_permissions.IsCoachOrAdmin]
 
@@ -29,6 +29,17 @@ class TeamViewSet(viewsets.ReadOnlyModelViewSet):
 
     @action(detail=True, renderer_classes=[renderers.JSONRenderer])
     def players(self, request, *args, **kwargs):
+        """
+        Custom action on TeamViewSet to filter based on a percentile of players average score in a team
+
+        Query Params:
+            percentile (int): optional integer value between 0-100.
+            if query param isn't provided 90 is considered as default value.
+
+        Returns:
+            list: A list of players who has greater than or equal average scores of given percentile value in the
+            average score distribution.
+        """
         team = self.get_object()
         score_list = list(team.player_set.values_list('average_score', flat=True))
         percentile_value = np.percentile(score_list, int(request.query_params.get('percentile', 90)))

@@ -5,7 +5,7 @@ from main.models import User
 
 class IsCoachOrAdmin(permissions.BasePermission):
     """
-    Role based permission checks
+    Extended class from Base Permission to define custom permission checks on object level
     """
 
     def has_object_permission(self, request, view, obj):
@@ -19,7 +19,7 @@ class IsCoachOrAdmin(permissions.BasePermission):
 
 class IsAdmin(permissions.BasePermission):
     """
-    Role based permission checks
+    Extended class from Base Permission to define custom permission checks Admin role
     """
 
     def has_permission(self, request, view):
