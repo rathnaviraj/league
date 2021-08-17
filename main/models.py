@@ -54,6 +54,9 @@ class User(AbstractUser):
     time_spent = models.FloatField(default=0)
     online = models.BooleanField(default=False)
 
+    def __str__(self):
+        return "{} {}".format(self.first_name, self.last_name)
+
     def record_login(self):
         """
         Updates the login related statuses upon user login
@@ -71,9 +74,6 @@ class User(AbstractUser):
         time_difference = now - self.last_login
         self.time_spent += time_difference.total_seconds()
         self.save()
-
-    def __str__(self):
-        return "{} {}".format(self.first_name, self.last_name)
 
 
 class Admin(User):
@@ -172,6 +172,9 @@ class Match(models.Model):
         blank=True
     )
 
+    def __str__(self):
+        return self.name
+
     @property
     def name(self):
         """
@@ -181,9 +184,6 @@ class Match(models.Model):
             string: containing both team names and respective scores as a label
         """
         return "{}-({}) vs {}-({})".format(self.team_a.name, self.team_a_score, self.team_b.name, self.team_b_score)
-
-    def __str__(self):
-        return self.name
 
     class Meta:
         verbose_name = _('match')
