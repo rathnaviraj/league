@@ -25,6 +25,7 @@ router.register(r'players', views.PlayerViewSet)
 router.register(r'matches', views.MatchViewSet)
 
 urlpatterns = [
+    path('', include('main.urls')),
     path('', include(router.urls)),
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))

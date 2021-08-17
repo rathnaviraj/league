@@ -1,6 +1,9 @@
+import datetime
+
 from django.contrib.auth.models import AbstractUser
-from django.utils.translation import gettext_lazy as _
 from django.db import models
+from django.utils.timezone import utc
+from django.utils.translation import gettext_lazy as _
 
 
 class Team(models.Model):
@@ -47,6 +50,27 @@ class User(AbstractUser):
     )
 
     role = models.PositiveSmallIntegerField(choices=ROLE_CHOICES, blank=False, null=False, default=3)
+    login_count = models.IntegerField(default=0)
+    time_spent = models.FloatField(default=0)
+    online = models.BooleanField(default=False)
+
+    def record_login(self):
+        """
+        Updates the login related statuses upon user login
+        """
+        self.login_count += 1
+        self.online = True
+        self.save()
+
+    def record_logout(self):
+        """
+        Updates the login related statuses upon user logout
+        """
+        self.online = False
+        now = datetime.datetime.utcnow().replace(tzinfo=utc)
+        time_difference = now - self.last_login
+        self.time_spent += time_difference.total_seconds()
+        self.save()
 
     def __str__(self):
         return "{} {}".format(self.first_name, self.last_name)

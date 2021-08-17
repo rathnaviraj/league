@@ -1,6 +1,16 @@
 from rest_framework import serializers
 
-from main.models import Player, Team, Match
+from main.models import Player, Team, Match, User
+
+
+class StatisticSerializer(serializers.ModelSerializer):
+    """
+    Extended ModelSerializer for User Statistics
+    """
+
+    class Meta:
+        model = User
+        fields = ['first_name', 'last_name', 'email', 'login_count', 'online', 'time_spent']
 
 
 class PlayerSerializer(serializers.HyperlinkedModelSerializer):
