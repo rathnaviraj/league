@@ -86,6 +86,8 @@ Run the Django development server to test the application. The Default DRF Web a
 
 Following API Endpoints are accessible with basic username and password authentication provided.
 
+**Note:** A postman collection is available in `Util` folder for your convenience.
+
 ### Authentication
 
 Application uses basic username and password. The password `supunviraj` is commonly configured for all users generated for convenience in testing the API
